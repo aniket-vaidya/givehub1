@@ -3,7 +3,6 @@ document.getElementById('donateButton').addEventListener('click', function() {
   window.location.href = donateUrl;
 });
 
-
 document.getElementById('requestButton').addEventListener('click', function() {
   const requestUrl = this.getAttribute('data-url');
   window.location.href = requestUrl;
