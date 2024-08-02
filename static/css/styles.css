@@ -46,6 +46,7 @@ h1 {
     animation: blink 0.7s infinite; /* Customize the blink animation */
   }
 
+/* Buttons styling */
 .button {
     transition: all 0.3s ease-in-out;
     font-family: "Dosis", sans-serif;
@@ -79,93 +80,159 @@ h1 {
     margin-top: 0px;
 }
 
-/* Overall styling for the navbar */
+/* Responsive styling for buttons */
+@media (max-width: 992px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust the spacing between buttons */
+    }
+
+    .button {
+        width: 80%; /* Adjust the width for mobile devices */
+    }
+}
+
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
 nav {
-    box-shadow: 0 5px 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures spacing between items */
+    justify-content: space-between;
     height: 100px;
-    position: fixed; /* Fixes the navbar at the top */
-    top: 0; /* Aligns it to the top of the viewport */
-    width: 100%; /* Ensures the navbar spans the full width */
-    background-color: #33577e; /* Background color for visibility */
-    z-index: 1000   ; /* Ensures it stays on top of other content */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #33577e;
+    z-index: 1000;
 }
 
-/* Ensure content does not hide under the fixed navbar */
 body {
-    padding-top: 100px; /* Adjust based on the height of your navbar */
+    padding-top: 100px; /* Ensure content does not hide under the fixed navbar */
 }
 
-/* Styling for the unordered list in the navbar */
 nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
 }
 
-/* Styling for each list item in the navbar */
 nav ul li {
-    margin: 0 10px; /* Spacing between items */
+    margin: 0 10px;
 }
 
-/* Styling for buttons inside the list items */
+nav ul a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul a i {
+    font-size: 20px;
+}
+
+nav ul a span {
+    padding: 0 5px 0 7px;
+}
+
+nav ul a:hover,
+nav ul .active,
+nav ul li:hover > a {
+    background: #0563bb;
+    color: #fff;
+}
+
+nav ul a:hover span,
+nav ul .active span,
+nav ul li:hover > a span {
+    color: #fff;
+}
+
+/* Button Styling inside Navbar */
 nav ul button {
     border-radius: 20px;
     height: 100px;
     width: 200px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for better visibility */
     font-size: 16px;
     background-color: #33577e;
     border: none;
     color: white;
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer;
 }
 
-/* Hover effect for buttons */
 nav ul button:hover {
     background: #406d9d;
 }
 
-/* Styling for the spinner (if it's part of the navbar) */
-.spinner {
-    margin-left: auto; /* Push spinner to the right */
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 9999;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    color: #44505b;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 5px;
 }
 
-/* Styling for the logo container */
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active #header {
+    left: 0;
+}
+
+.mobile-nav-active,
+.mobile-nav-toggle {
+    background-color: #6c7b8a;
+    color: #fff;
+}
+
+/* Logo Styling */
 #logo-container {
-    margin-left: auto; /* Push logo to the right */
-}
-
-/* Styling for the logo image */
-#logo {
-    height: 50px; /* Adjust logo size as needed */
-}
-    
-
-
-
-
-/* header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-} */
-/* header nav ul li a:hover {
-    text-decoration: underline;
-} */
-
-#logo-container {
+    margin-left: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 120px;
 }
 
+#logo {
+    height: 180px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #33577e 30px;
+}
+
+/* Spinner Styling */
 .spinner {
     margin-top: 120px;
     width: 150px;
@@ -176,7 +243,7 @@ nav ul button:hover {
     animation: spinning82341 1.7s linear infinite;
     border-radius: 90px;
     filter: blur(1px);
-    box-shadow: 0px -5px 20px 0px rgb(168, 70, 224), 0px 5px 20px 0px rgb(0, 225, 255);
+    box-shadow: 0px -5px 20px rgb(168, 70, 224), 0px 5px 20px rgb(0, 225, 255);
 }
 
 @keyframes spinning82341 {
@@ -185,20 +252,134 @@ nav ul button:hover {
     }
 }
 
-#logo {
-    height: 180px;
-    background-color: #ffff;
+/* Hero Section Styling */
+.hero0 {
+    background-color: #548fcf;
+    height: 500px;
+    color: white;
+    overflow: hidden;
+}
+
+.hero2 {
+    background: #8eaac8;
+    height: 550px;
+    overflow: hidden;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hide menu by default on mobile */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when active */
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    #logo-container {
+        margin-top: 20px;
+    }
+
+    #logo {
+        height: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    #logo-container {
+        margin-top: 0;
+    }
+
+    #logo {
+        height: 180px;
+    }
+    .spinner { 
+        height: 180px;
+    }
+
+}
+
+/* Additional Utility Styling */
+* {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Above the navbar */
+    background: #cdd0d3;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+    width: 40px; /* Set width to create a square */
+    height: 40px; /* Set height to create a square */
+    padding: 0; /* Remove padding to make it a square */
+    cursor: pointer;
+    text-align: center; /* Center the icon */
+    line-height: 40px; /* Center the icon vertically */
+}
+
+/* Spinner Styling */
+.mobile-nav-toggle .spinner {
+    width: 24px;
+    height: 24px;
+    margin: 8px auto; /* Center the spinner inside the button */
+    border: 2px solid #ffffff;
+    border-top: 2px solid #cdd0d3;
     border-radius: 50%;
-    border: solid #33577e 30px;
+    animation: spin 0.8s linear infinite;
 }
 
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing:border-box;
-    font-family: "Arial",sans-serif;
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+/* Show the toggle button only on small screens */
+@media (max-width: 992px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+    
+    #nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100px; /* Below the navbar */
+        left: 0;
+        background-color: #a1afbf;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    #nav-menu li {
+        margin: 0;
+    }
+}
+
+/* mob tog end */
 
 .hero0{
     background-color: #548fcf;
@@ -246,17 +427,13 @@ nav ul button:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     width: 100%;
-    /* height: 10%; */
     max-width: 300px;
     padding: 0;
     text-align: center;
 }
 
 .card-image {
-/*     position: relative; */
-    top: -40px;
-    /* margin-top: 20px; */
-     margin: 30px auto auto auto; 
+    margin: 30px auto auto auto;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -315,32 +492,13 @@ nav ul button:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.hero4{
-    background-color:#2b6ba2;;
-    height: 550px;;
+.hero4 {
+    background-color: #2b6ba2;
+    height: 550px;
     overflow: hidden;
 }
-/* .demo{
-    background-color:#f8f8f8;;
-    height: 550px;;
-    overflow: hidden;
-} */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin: 100px auto;
-}
-.container2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin: 80px auto;
-}
- .container3{
+.container, .container2, .container3, .container4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,12 +506,14 @@ nav ul button:hover {
     margin: 80px auto;
 }
 
-.container4{
-    display: flex;
-    justify-content:left;
-    width: 90%;
-    margin: 80px auto;
-} 
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .container, .container2, .container3, .container4 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+ 
 
 /* .containerd{
     display: flex;
