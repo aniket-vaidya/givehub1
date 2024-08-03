@@ -11,33 +11,61 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body id="home">
+</head>
+<body id="home">
     <header>
-        <nav>
-            <ul id="nav-menu">
+        <nav id="desktop-nav">
+            <ul>
                 <li>
-                    <a href="#home"><button>Home</button></a>
+                    <div>
+                        <a href="#home"><button>Home</button></a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#about-us"><button>About us</button></a>
+                    <div>
+                        <a href="#about-us"><button>About us</button></a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#contact-us"><button>Contact us</button></a>
+                    <div>
+                        <a href="#contact-us"><button>Contact us</button></a>
+                    </div>
                 </li>
             </ul>
-           <div class="spinner">
-               <!-- <div class="spinner1"></div>-->
+            <div class="spinner">
+                <div class="spinner1"></div>
             </div>
+
             <div id="logo-container">
                 <img id="logo" src="{{ url_for('static', filename='../static/images/logo.png') }}" alt="Logo">
             </div>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        </nav>
+        <nav id="mobile-nav">
+            <button id="mobile-nav-toggle" class="mobile-nav-toggle">
                 <i class="fas fa-bars"></i>
-               
             </button>
+            <ul id="nav-menu">
+                <li>
+                    <div>
+                        <a href="#home"><button><i class="fas fa-home"></i></button></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#about-us"><button><i class="fas fa-info-circle"></i></button></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#contact-us"><button><i class="fas fa-phone"></i></button></a>
+                    </div>
+                </li>
+            </ul>
         </nav>
     </header>
-    
     <main>
+    
+
         <section class="hero" >
             <!-- <i><h1>Namaste </h1></i> -->
              <div id="typing-text">
@@ -52,55 +80,35 @@
             </p>
         </section>
         <section class="hero0" id="about-us">
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="hero0-content0">
-                    <h2>Our Mission</h2>
-                    <p>Our mission is to make a meaningful impact on global health by reducing medicine wastage and ensuring that vital medications reach those in need. We are dedicated to bridging the gap between unused medicine and individuals who require them, all while collaborating with NGOs to maintain safety and legal compliance.</p>
-                </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-delay="100">
-                    <img src="https://www.pngmart.com/files/About-Us-PNG-Isolated-File.png" alt="About Us">
-                </div>
+            <div class="container"  data-aos="fade-up" data-aso-delay="100">
+               <div class="hero0-content0">
+                   <h2>Our Mission</h2>
+                   <p>Our mission is to make a meaningful impact on global health by
+                        reducing medicine wastage and ensuring that vital medications reach those in need. We are dedicated
+                         to bridging the gap between unused medicine and individuals who require them, 
+                       all while collaborating with NGOs to maintain safety and legal compliance.</p>
+               </div>
+                       <div class="hero-image" data-aos="fade-left" data-aso-delay="100">
+                           <img alt="image-saying-about-us" src="https://www.pngmart.com/files/About-Us-PNG-Isolated-File.png">
+                       </div>
             </div> 
-        </section>
-        
-        <section class="hero2">
-            <div class="container2" data-aos="fade-up" data-aos-delay="100">
+         </section>
+         <section class="hero2">
+             <div class="container2"  data-aos="fade-up" data-aso-delay="100">
                 <div class="hero0-content0">
-                    <h2>How it Works?</h2>
-                    <p>1. Donation Process: Donors can easily contribute unused or surplus medicines through our user-friendly platform. Once a donation is made, our team arranges for collection from the donor’s location.</p>
-                    <p>2. Safety and Compliance: We work closely with NGOs and healthcare professionals to ensure that all donated medicines are safe, properly documented, and comply with legal and regulatory standards. Our rigorous inspection process guarantees the quality and safety of every donation.</p>
-                    <p>3. Request and Delivery: Individuals in need can request medicines through our platform. We ensure that these requests are promptly processed and delivered to the recipient, providing timely support where it is most needed.</p>
+                   <h2>How it Works?</h2>
+               <p>
+               1. Donation Process: Donors can easily contribute unused or surplus
+                medicines through our user-friendly platform. Once a donation is made, our team arranges for collection from the donor’s location.
+               </p>
+               <p>2.Safety and Compliance: We work closely with NGOs and healthcare professionals to ensure that all donated medicines are safe, properly documented,
+                and comply with legal and regulatory standards. Our rigorous inspection process guarantees the quality and safety of every donation.
+               </p>
+               <p> 3. Request and Delivery: Individuals in need can request medicines through our platform. We ensure that these requests are promptly processed and
+                delivered to the recipient, providing timely support where it is most needed.</p>
                 </div>
-            </div>
-        </section>
-        
-         <!-- <section class="hero3">
-           <div class="ph"> 
-           <h2>Team Members</h2>
-           </div> 
-            <div class="container3">
-                   <div class="team-member">
-                       <div class="member1">
-                       <img src="static\images\aniket.jpg" alt="Team Member 1">
-                         <div class="name">Aniket Vaidya</div>
-                       </div>
-                       <div class="member2">
-                       <img src=static\images\pratik.jpg alt="Team Member 2">
-                         <div class="name">Pratik patil</div>
-                       </div>           
-           
-                      <div class="member3">
-                      <img src=static\images\lokesh.jpeg alt="Team Member 3">
-                         <div class="name">Lokesh Patil</div>
-                      </div>
-           
-                      <div class="member4">
-                       <img src=static\images\diksha.jpeg alt="Team Member 4">
-                        <div class="name">Diksha Rane</div>
-                       </div>
-                   </div>
-          </div> 
-          -->
+             </div>
+         </section>
           <section class="hero3" >
             <div class="ph" >
                 <h2>Team Members</h2>
@@ -116,9 +124,9 @@
                             <!-- <div class="role">Team leader</div> -->
                             <div class="role">Frontend Developer</div>
                             <div class="social-media">
-                                <a href="https://twitter.com/pratik" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/in/pratik" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/pratik" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://twitter.com/lokesh" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://linkedin.com/in/lokesh" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/lokesh" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -177,7 +185,7 @@
         <!-- Help Button start -->
     
     <div class="help-button">
-        <div class="icon phone" onclick="showHelp('phone')"><i class="fas fa-phone-alt"></i></div>
+        <div class="icon phone " onclick="showHelp('phone')"><i class="fas fa-phone-alt"></i></div>
         <div class="icon email" onclick="showHelp('email')"><i class="fas fa-envelope"></i></div>
         <div class="icon location" onclick="showHelp('location')"><i class="fas fa-map-marker-alt"></i></div>
     </div>
@@ -191,42 +199,23 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        
-          
-         </section>
-         <!-- <section class="hero4">
-           <div class="container4">
-               <div class="hero0-content0">
-                 <h2 >Story</h2>
-                 <p> We are a passionate team committed to addressing the challenges of medicine scarcity and wastage. Our platform connects generous donors with individuals and communities who need essential medicines.
-                     By facilitating the donation of unused medications, we aim to support health and well-being while reducing environmental impact.</p> -->
-            <!-- <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:ranediksha363@gmail.com">ranediksha363@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:8624061812">8624061812</a></p>
-            </div>
-            <p><strong>Follow Us:</strong></p>
-             <div class="social-media">
-                <a href="https://www.instagram.com/diya_rane12?igsh=MWhydXBwYWV2NDNtNA==" target="_blank">Instagram</a>
-             </div> -->
-            </div>
-          </div>
-         </section> 
     </main>
     <section class="contact-us" id="contact-us">
         <footer class="site-footer" id="contact">
            <div class="container">
                <div class="column">
-                 <h3>Reg.Office</h3>
-                 <p>XYZ,Jalgaon, Maharashtra, India, 425001</p>
-                 <p>24X7 In Service</p>
+                 <h3>Registration Office</h3>
+                 <p>XYZ, Jalgaon, Maharashtra, India, 425001</p>
+                 <p>24x7 in service</p>
                  <p>Monday - Sunday</p>
                </div>
                <div class="column">
-                 <h3>Our HUB</h3>
-                 <a href="mailto:givehubdonation@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer"><p>givehubdonation@gmail.com</p></a>
-                 <p>123 xyz Nagar, <br>Jalgaon, Maharashtra <br> 425001</p>
+                 <h3>Our Hub</h3>
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=givehubdonation@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer"><span>givehubdonation@gmail.com</span></a>
+                 <p>123 XYZ nagar, <br>Jalgaon, Maharashtra <br> 425001</p>
                </div>
                <div class="column">
+                    <div></div>
                  <h3>Socials</h3>
                  <div class="social-icons">
                    <a href="https://www.facebook.com/profile.php?id=61563915081013" class="social-icon" target="_blank" rel="noopener noreferrer">
@@ -235,28 +224,17 @@
                <a href="https://www.instagram.com/givehubdonation?igsh=MWNhZGswZHBzc3Bxcw==" class="social-icon" target="_blank" rel="noopener noreferrer">
                <i class="fab fa-instagram"></i>
                </a>
-               <a href="mailto:givehubdonation@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer">
+               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=givehubdonation@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-envelope"></i>
             </a>
                  </div>
                  
-                 <p>Copyright © GIVE HUB 2024</p>
-                 <p>Design: Tech Titans </p>
+                 <p class="footer-bottommost">Copyright © GiveHub 2024</p>
+                 <p class="footer-bottommost">Developed by: Tech Titans </p>
                </div>
              </div>
          </footer>
       </section>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.mobile-nav-toggle');
-            const navMenu = document.querySelector('#nav-menu');
-    
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-            });
-        });
-    </script>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init();
@@ -264,6 +242,7 @@
     </script>
     <script src="{{ url_for('static', filename='../static/js/script.js') }}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
           var options = {
@@ -278,6 +257,12 @@
           var typed = new Typed("#typed", options);
         });
       </script>
+      <script>
+        // Add event listener to mobile nav toggle button
+        document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
