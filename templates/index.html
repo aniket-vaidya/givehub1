@@ -47,17 +47,17 @@
             <ul id="nav-menu">
                 <li>
                     <div>
-                        <a href="#home"><button><i class="fas fa-home"></i></button></a>
+                        <a href="#home"><button id="home-button"><i class="fas fa-home"></i></button></a>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <a href="#about-us"><button><i class="fas fa-info-circle"></i></button></a>
+                        <a href="#about-us"><button id="about-button"><i class="fas fa-info-circle"></i></button></a>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <a href="#contact-us"><button><i class="fas fa-phone"></i></button></a>
+                        <a href="#contact-us"><button id="contact-button"><i class="fas fa-phone"></i></button></a>
                     </div>
                 </li>
             </ul>
@@ -261,7 +261,44 @@
         // Add event listener to mobile nav toggle button
         document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
             document.getElementById('nav-menu').classList.toggle('show');
+            this.classList.toggle('active');
         });
+    
+        // script.js
+        
+        
+        function closeMobileNav() {
+            document.getElementById('nav-menu').classList.remove('show');
+        }
+        
+        const homeButton = document.getElementById('home-button');
+        const aboutButton = document.getElementById('about-button');
+        const contactButton = document.getElementById('contact-button');
+        
+        homeButton.addEventListener('click', function() {
+            scrollToSection('home');
+            closeMobileNav();
+        });
+        
+        aboutButton.addEventListener('click', function() {
+            scrollToSection('about-us');
+            closeMobileNav();
+        });
+        
+        contactButton.addEventListener('click', function() {
+            scrollToSection('contact-us');
+            closeMobileNav();
+        });
+        
+        function scrollToSection(id) {
+            const targetElement = document.getElementById(id);
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 
