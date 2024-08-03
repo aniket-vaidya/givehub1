@@ -163,3 +163,29 @@ button:hover {
     cursor: pointer;
 }
 /* help button end */
+@media (max-width: 992px) {
+     .help-modal-content {
+        background-color: white;
+        margin: 240px auto;
+        padding: 20px;
+        width: 1000px;
+        max-width: 300px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .help-close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .help-close:hover,
+    .help-close:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* help button end */
+
+}
