@@ -1,28 +1,34 @@
 /* styles.css */
 
-html, body {
-    width: 100vw;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 h1 {
     color:#33577e;  
-    font-size: 320%;
-    margin-bottom: 3%;
-}
+    font-size: 3.2rem;
+}   
 
 .p1 {
     color:#33577e;  
-    font-size: 170%;
+    font-size: 1.7rem;
     font-family: "Arial",sans-serif;
-    margin-top: 1%;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 /* Main Section */
 .hero {
-    width: 100vw;
     font-family: Arial, sans-serif;
     background: #8eaac8;
     background-size: 100%; /* Adjusted background size */
@@ -36,37 +42,36 @@ h1 {
 #typing-text {
     display: flex;
     justify-content: center;
-    margin-top: 3%;
-    height: 80px;
+    margin-top: 3rem;
+    height: 5rem;
 }
 
 .typed-cursor {
-    font-size: 330%;   /* Adjust the size as needed */
+    font-size: 3.3rem;   /* Adjust the size as needed */
     color: #497db4;        /* Change the color */
     animation: blink 0.7s infinite; /* Customize the blink animation */
   }
 
-/* Buttons styling */
 .button {
     transition: all 0.3s ease-in-out;
     font-family: "Dosis", sans-serif;
-    width: 15%;
-    height: 80px;
-    margin-bottom: 2%;
-    border-radius: 50px;
+    width: 15rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 3.125rem;
     justify-content: space-between;
     background-color: #33577e;
-    box-shadow: 0 4px 6px rgba(7, 26, 46, 0.7);
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(7, 26, 46, 0.7);
     outline: none;
     cursor: pointer;
     border: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
 }
 
 .button:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(7, 26, 46, 0.5);
+    box-shadow: 0.625rem 0.625rem 1.25rem rgba(7, 26, 46, 0.5);
 }
 
 .button:active {
@@ -76,122 +81,150 @@ h1 {
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 300px; /* Adjust the value to increase or decrease space */
-    margin-top: 0px;
+    gap: 18.75rem; /* Adjust the value to increase or decrease space */
+    margin-top: 0;
 }
 
-/* Responsive styling for buttons */
-@media (max-width: 992px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Adjust the spacing between buttons */
-    }
-
-    .button {
-        width: 80%; /* Adjust the width for mobile devices */
-    }
-}
-
-/* Global Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-}
-
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar Styling */
+/* Overall styling for the navbar */
 nav {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3125rem 1.25rem;
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #33577e;
-    z-index: 1000;
+    justify-content: space-between; /* Ensures spacing between items */
+    height: 6.25rem;
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Ensures the navbar spans the full width */
+    background-color: #33577e; /* Background color for visibility */
+    z-index: 1000   ; /* Ensures it stays on top of other content */
 }
 
+/* Ensure content does not hide under the fixed navbar */
 body {
-    padding-top: 100px; /* Ensure content does not hide under the fixed navbar */
+    padding-top: 6.25rem; /* Adjust based on the height of your navbar */
 }
 
+/* Styling for the unordered list in the navbar */
 nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 1.25rem; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
-nav ul li {
-    margin: 0 10px;
-}
 
-nav ul a {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 15px;
-    transition: background 0.3s, color 0.3s;
-}
-
-nav ul a i {
-    font-size: 20px;
-}
-
-nav ul a span {
-    padding: 0 5px 0 7px;
-}
-
-nav ul a:hover,
-nav ul .active,
-nav ul li:hover > a {
-    background: #0563bb;
-    color: #fff;
-}
-
-nav ul a:hover span,
-nav ul .active span,
-nav ul li:hover > a span {
-    color: #fff;
-}
-
-/* Button Styling inside Navbar */
+/* Styling for buttons inside the list items */
 nav ul button {
-    border-radius: 20px;
-    height: 100px;
-    width: 200px;
-    font-size: 16px;
+    border-radius: 1.25rem;
+    height: 6.25rem;
+    width: 13.75rem;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for better visibility */
+    font-size: 1rem;
     background-color: #33577e;
     border: none;
     color: white;
-    cursor: pointer;
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Hover effect for buttons */
 nav ul button:hover {
-    background: #406d9d;
+    background: #3e6898;
 }
 
-/* Mobile Navigation Toggle */
-.mobile-nav-toggle {
+/* Styling for the spinner (if it's part of the navbar) */
+.spinner {
+    margin-left: auto; /* Push spinner to the right */
+}
+
+/* Styling for the logo container */
+#logo-container {
+    margin-left: auto; /* Push logo to the right */
+}
+
+/* Styling for the logo image */
+#logo {
+    height: 3.125rem; /* Adjust logo size as needed */
+}
+    
+
+#logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7.5rem;
+}
+
+.spinner {
+    margin-top: 7.5rem;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: spinning82341 1.7s linear infinite;
+    border-radius: 5.625rem;
+    filter: blur(1px);
+    box-shadow: 0 -0.3125rem 1.25rem 0 rgb(168, 70, 224), 0 0.3125rem 1.25rem 0 rgb(0, 225, 255);
+}
+
+@keyframes spinning82341 {
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+#logo {
+    height: 11.25rem;
+    background-color: #ffff;
+    border-radius: 50%;
+    border: solid #33577e 1.875rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "Arial",sans-serif;
+}
+
+.hero0{
+    background-color: #548fcf;
+    overflow: hidden;
+    height: 31.25rem;
+    color: white;
+}
+
+.hero2{
+    background:#8eaac8;
+    height: 34.375rem;
+    overflow: hidden;
+}
+
+/* Hero Section Styling */
+.hero3 {
+    background-color: #548fcf;
+    text-align: center;
+    padding: 3.125rem 1.25rem;
+}
+
+.ph h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+    color: white;
+}
+/* Add styles for mobile navbar */
+#mobile-nav {
+    display: none;
+}
+
+#mobile-nav-toggle {
     position: fixed;
-    left: 10px;
-    top: 10px;
-    z-index: 9999;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100; /* Ensure the toggle button is above other content */
     border: 0;
     background: none;
     font-size: 28px;
@@ -202,217 +235,50 @@ nav ul button:hover {
     padding: 5px;
 }
 
-.mobile-nav-active {
-    overflow: hidden;
-}
-
-.mobile-nav-active #header {
-    left: 0;
-}
-
-.mobile-nav-active,
-.mobile-nav-toggle {
-    background-color: #6c7b8a;
-    color: #fff;
-}
-
-/* Logo Styling */
-#logo-container {
-    margin-left: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 120px;
-}
-
-#logo {
-    height: 180px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: solid #33577e 30px;
-}
-
-/* Spinner Styling */
-.spinner {
-    margin-top: 120px;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: spinning82341 1.7s linear infinite;
-    border-radius: 90px;
-    filter: blur(1px);
-    box-shadow: 0px -5px 20px rgb(168, 70, 224), 0px 5px 20px rgb(0, 225, 255);
-}
-
-@keyframes spinning82341 {
-    to {
-        transform: translateX(-50%) rotate(360deg);
-    }
-}
-
-/* Hero Section Styling */
-.hero0 {
-    background-color: #548fcf;
-    height: 500px;
-    color: white;
-    overflow: hidden;
-}
-
-.hero2 {
-    background: #8eaac8;
-    height: 550px;
-    overflow: hidden;
-}
-
-/* Responsive Styling */
-@media (max-width: 992px) {
-    nav ul {
-        flex-direction: column;
-        display: none; /* Hide menu by default on mobile */
-    }
-
-    nav ul.show {
-        display: flex; /* Show menu when active */
-    }
-
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    #logo-container {
-        margin-top: 20px;
-    }
-
-    #logo {
-        height: 120px;
-    }
-}
-
-@media (min-width: 992px) {
-    .mobile-nav-toggle {
-        display: none;
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    #logo-container {
-        margin-top: 0;
-    }
-
-    #logo {
-        height: 180px;
-    }
-    .spinner { 
-        height: 180px;
-    }
-
-}
-
-/* Additional Utility Styling */
-* {
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-}
-/* Mobile Navigation Toggle */
-.mobile-nav-toggle {
-    display: none; /* Hidden by default */
+#nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1001; /* Above the navbar */
-    background: #cdd0d3;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    border-radius: 5px;
-    width: 40px; /* Set width to create a square */
-    height: 40px; /* Set height to create a square */
-    padding: 0; /* Remove padding to make it a square */
-    cursor: pointer;
-    text-align: center; /* Center the icon */
-    line-height: 40px; /* Center the icon vertically */
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
 }
 
-/* Spinner Styling */
-.mobile-nav-toggle .spinner {
-    width: 24px;
-    height: 24px;
-    margin: 8px auto; /* Center the spinner inside the button */
-    border: 2px solid #ffffff;
-    border-top: 2px solid #cdd0d3;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+#nav-menu.show {
+    right: 0;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+#nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Show the toggle button only on small screens */
-@media (max-width: 992px) {
-    .mobile-nav-toggle {
-        display: block;
-    }
-    
-    #nav-menu {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100px; /* Below the navbar */
-        left: 0;
-        background-color: #a1afbf;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    #nav-menu.show {
-        display: flex;
-    }
-
-    #nav-menu li {
-        margin: 0;
-    }
-}
-
-/* mob tog end */
-
-.hero0{
-    background-color: #548fcf;
-    overflow: hidden;
-    height: 500px;
-    color: white;
-}
-
-.hero2{
-    background:#8eaac8;
-    height: 550px;;
-    overflow: hidden;
-}
-
-/* Hero Section Styling */
-.hero3 {
-    background-color: #548fcf;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.ph h2 {
-    font-size: 36px;
+#nav-menu li {
     margin-bottom: 20px;
-    color: white;
 }
 
+#nav-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+#nav-menu a:hover {
+    color: #666;
+}
 /* Container Styling */
 .container3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
     width: 90%;
+    max-width: 90rem;
     margin: 0 auto;
     justify-items: center;
 }
@@ -422,23 +288,27 @@ nav ul button:hover {
 /* Team Member Card Styling */
 .team-member .card {
     background: #b1bfce;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     width: 100%;
-    max-width: 300px;
+    /* height: 10%; */
+    max-width: 18.75rem;
     padding: 0;
     text-align: center;
 }
 
 .card-image {
-    margin: 30px auto auto auto;
-    width: 120px;
-    height: 120px;
+/*     position: relative; */
+    top: -2.5rem;
+    /* margin-top: 20px; */
+     margin: 1.875rem auto auto auto; 
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -449,32 +319,32 @@ nav ul button:hover {
 }
 
 .card-content {
-    padding: 20px;
-    padding-top: 40px;
+    padding: 1.25rem;
+    padding-top: 2.5rem;
     text-align: center;
 }
 
 .name {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     color: #33577e;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .role {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .social-media {
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 }
 
 .social-media a {
     color: #33577e;
-    margin: 0 10px;
-    font-size: 20px;
+    margin: 0 0.625rem;
+    font-size: 1.25rem;
     transition: color 0.3s ease;
 }
 
@@ -483,116 +353,127 @@ nav ul button:hover {
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .card:hover .card-image {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.hero4 {
-    background-color: #2b6ba2;
-    height: 550px;
+.hero4{
+    background-color:#2b6ba2;
+    height: 34.375rem;
     overflow: hidden;
 }
+/* .demo{
+    background-color:#f8f8f8;;
+    height: 550px;;
+    overflow: hidden;
+} */
 
-.container, .container2, .container3, .container4 {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 80px auto;
+    max-width: 90rem;
+    width: 100%;
+    margin: 6.25rem auto;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90rem;
+    width: 100%;
+    margin: 5rem auto;
+}
+ .container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90rem;
+    width: 100%;
+    margin: 5rem auto;
 }
 
-/* Responsive Styling */
-@media (max-width: 992px) {
-    .container, .container2, .container3, .container4 {
-        flex-direction: column;
-        align-items: center;
-    }
-}
- 
+.container4{
+    display: flex;
+    justify-content:left;
+    max-width: 90rem;
+    width: 100%;
+    margin: 5rem auto;
+} 
 
 /* .containerd{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     width: 90%;
     margin: 80px auto;
 } */
 
 .hero0-content0{
     flex: 1;
-    width: 600px;
-    margin:0px 25px;
+    width: 100%;
+    max-width: 100rem;
+    margin:0 1.5625rem;
     animation: fadeInUp 2s ease;
 }
 
-
-
-/* .demo-contentd{
-    flex: 1;
-    width: 600px;
-    margin:0px 25px;
-    animation: fadeInUp 2s ease;
-} */
 .hero0 h2{
-    font-size: 35px;
-    margin-bottom: 20px;
+    font-size: 2.1875rem;
+    margin-bottom: 1.25rem;
 }
 .hero2 h2{
-    font-size: 35px;
-    margin-bottom: 40px;
+    font-size: 2.1875rem;
+    margin-bottom: 2.5rem;
     /* color: #f8f8f8; */
     color:#33577e;  
 
 }
 .hero3 h2{
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 80px auto;
+    max-width: 90rem;
+    width: 100%;
+    margin: 5rem auto;
     flex: 1;
     animation: fadeInRight 2s ease;
 
 }
 .hero4 h2{
-    font-size: 35px;
-    margin-bottom: 40px;
+    font-size: 2.1875rem;
+    margin-bottom: 2.5rem;
     color: #f8f8f8;
 }
-/* .demo h2{
-    font-size: 35px;
-    margin-bottom: 20px;
-    color:#666;
 
-} */
 .hero0 p{
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.5;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 .hero2 p{
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.5;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     color:#33577e;  
 }
 .hero3 p{
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.5;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .hero4 p{
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.5;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 /* .demo p{
     font-size: 22px;
@@ -602,7 +483,8 @@ nav ul button:hover {
 } */
 .hero-image{
     flex: 1;
-    width: 600px;
+    width: 100%;
+    max-width: 37.5rem;
     margin: auto;
     /* animation: fadeInRight 2s ease; */
 
@@ -615,7 +497,7 @@ nav ul button:hover {
 .team-member img{
     width: 100%;
     height: auto;
-    border-radius:10px;
+    border-radius:0.625rem;
 
 }
 
@@ -623,21 +505,21 @@ nav ul button:hover {
  @keyframes fadeInUp{
     0%{
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(3.125rem);
     }
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
  }
  @keyframes fadeInRight{
     0%{
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-3.125rem);
     }
     100%{
         opacity: 1;
-        transform: translateX(  0px);
+        transform: translateX(0);
     }
  }
  
@@ -645,18 +527,18 @@ nav ul button:hover {
     display: flex;
     flex-direction: row;
     overflow-x: auto; /* Allows horizontal scrolling if content overflows */
-    gap: 90px;
+    gap: 5.625rem;
 }
 
 .team-member img {
-    width: 120px; /* Fixed size */ /* Fixed size */
+    width: 7.5rem; /* Fixed size */ /* Fixed size */
     margin: 0; /* Removes any default margin */
 }
 .team-member .name {    
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px; /* Space between image and name */
+    margin-top: 0.625rem; /* Space between image and name */
 }
 /* help button start */
 .help-button {
@@ -668,26 +550,26 @@ nav ul button:hover {
     display: flex;
     flex-direction: column;
     background-color: #46709c;
-    border-radius: 10px 0 0 10px; 
-    padding: 5px 0;
-    box-shadow: 0 0 5px;
+    border-radius: 0.625rem 0 0 0.625rem; 
+    padding: 0.3125rem 0;
+    box-shadow: 0 0 0.3125rem;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #46709c;
     color: white;
     cursor: pointer;
-    margin: 5px 0;
-    font-size: 20px;
+    margin: 0.3125rem 0;
+    font-size: 1.25rem;
 }
 
 .icon:hover {
-    background-color: #483f93;
+    background-color: #5085c1;
 }
 
 .help-modal {
@@ -703,9 +585,9 @@ nav ul button:hover {
 
 .help-modal-content {
     background-color: white;
-    margin: 15% auto;
+    margin: 240px auto;
     padding: 20px;
-    width: 80%;
+    width: 1280px;
     max-width: 400px;
     border-radius: 10px;
     text-align: center;
@@ -733,19 +615,23 @@ nav ul button:hover {
 }
 
 .site-footer {
-    color: #1c3c57;
     margin: -100px 0;
+    color: #609dd3;
 }
 
 .site-footer h3 {
-    color: #4b7fac;
     font-size: 19px; 
 }
 
 .site-footer p {
     margin: 10px 0;
-    font-size: 15px; 
-    color: #437199; 
+    font-size: 15px;
+}
+
+.site-footer a {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #609dd3;
 }
 
 .container {
@@ -788,26 +674,182 @@ nav ul button:hover {
     margin: 0 10px;
 }
 
-/* Styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
 
-    .navbar ul {
+
+
+/* Making it responsive */
+
+@media (max-width: 992px) {
+    nav {
         display: none;
+    }
+    body {
+        padding-top: 0;
+    }
+    .buttons {
+        margin-top: 1rem;
         flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Reduced vertical space between buttons */
+    }
+    .buttons .button {
+        font-size: 1rem !important;
+        height: 3rem; /* Explicitly set a smaller height */
+        width: 9rem; /* Adjust width to maintain proportion */
+        padding: 0.5rem; /* Reduced padding */
+        margin-bottom: 0.3rem; /* Additional reduction in vertical space */
+    }
+    
+   p {
+    font-size: 1rem !important; /* Reduced font size for all paragraphs on mobile */
+    display: flex;
+    flex-direction: column;
+   }
+    .hero,
+    .hero0,
+    .hero2,
+    .hero3,
+    .hero4 {
+        height: auto; /* This allows the section to grow with content */
+        padding: 1rem 1rem; /* Adjust padding for better spacing on mobile */
     }
 
-    .navbar ul.show {
+    .hero p {
+        padding: 0 3rem;
+        text-align: left;
+    }
+
+    .hero0 .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero0 .hero0-content0 {
+        order: 1;
+        margin-top: 1rem;
+    }
+    .hero0 img {
+        max-width: 80%;
+        height: auto;
+        order: -1;
+    }
+    
+    main h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .container,
+    .container2,
+    .container3,
+    .container4 {
+        margin-top: 0;
+        margin-bottom: 0rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .icon {
+        height: 1.3rem;
+        width: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    #contact.site-footer {
+        margin: 0 0 0 0;
+    }
+
+    .contact-us .container {
+        .contact-us .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        }
+    }
+
+    .site-footer {
         display: flex;
     }
 
-    .navbar li {
-        margin: 5px 0;
+    .site-footer .column {
+        width: 49%;
+        text-align: left;
+        margin-bottom: 0rem;
     }
 
-    .navbar button {
+    .site-footer h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .site-footer p,
+    .site-footer a {
+        font-size: 0.7rem !important;
+        margin-bottom: 0.25rem;
+    }
+
+    .site-footer .column:last-child {
+        text-align: center;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons i {
+        font-size: 1rem !important;
+    }
+    
+    .container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 100.5 !important;
+        min-width: 100.5 !important;
+    }
+
+    .hero3 h2 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .contact-form .form-group {
+        width: 10px !important;
+    }
+    #desktop-nav {
+        display: none;
+    }
+    #mobile-nav {
         display: block;
     }
+    nav{
+        background-color: transparent;
+        box-shadow: none;
+   
+   
+    }
+    nav ul button {
+        border-radius: 1.25rem;
+        height: 2.25rem;
+        width: 4.75rem;
+        padding-bottom: 5px;
+        font-size: 1rem;
+        background-color: #33577e;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-top: -20px; /* Move the button 20px upwards */
+    }
+    
+    
+    /* Hover effect for buttons */
+    nav ul button:hover {
+        background: #3e6898;
+    }
+    
 }
