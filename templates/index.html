@@ -266,15 +266,12 @@
         });
       </script>
       <script>
-        // Add event listener to mobile nav toggle button
-        document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
-            document.getElementById('nav-menu').classList.toggle('show');
+    document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('half-open');
             this.classList.toggle('active');
         });
     
         // script.js
-        
-        
         function closeMobileNav() {
             document.getElementById('nav-menu').classList.remove('show');
         }
@@ -306,6 +303,26 @@
                 top: targetPosition,
                 behavior: 'smooth'
             });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}); 
         }
     </script>
 </body>
