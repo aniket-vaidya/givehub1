@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiveHub</title>
-    <link rel="stylesheet" href="/static/../static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/logo.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -34,7 +35,7 @@
                 <div class="spinner1"></div>
             </div>
             <div id="logo-container">
-                <img id="logo" src="/static/../static/images/logo.png" alt="Logo">
+                <img id="logo" src="{{ url_for('static', filename='../static/images/logo.png') }}" alt="Logo">
             </div>
         </nav>
         <nav id="mobile-nav">
@@ -62,20 +63,16 @@
     </header>
     <main>
         <section class="hero" >
-            <div class="mobile-spinner">
-                <div class="spinner">
-                 
-                </div>
-            </div>
+            <div class="mobile-spinner"></div>
             <div id="mobile-logo-container">
-                <img id="mobile-logo" src="/static/../static/images/logo.png" alt="Logo">
+                <img id="mobile-logo" src="{{ url_for('static', filename='../static/images/logo.png') }}" alt="Logo">
             </div>
              <div id="typing-text">
                 <h1 id="typed"></h1>
              </div>
             <div class="buttons">
-                <button id="donateButton" class="button" data-url="/donation">Donate</button>
-                <button id="requestButton" class="button" data-url="/request">Request</button>
+                <button id="donateButton" class="button" data-url="{{ url_for('donation') }}">Donate</button>
+                <button id="requestButton" class="button" data-url="{{ url_for('request_medicine') }}">Request</button>
             </div><br><br><br>
             <p class="p1">
                 Welcome to GiveHub, where every pill counts towards a healthier tomorrow. We are dedicated to bridging the gap between surplus medication and those in need. By donating unused medicines, you not only extend their life but also extend a lifeline to individuals who may otherwise go without essential treatments. Join us in making a difference. Explore how you can donate, learn about our impact, and discover stories of hope from those who benefit from your generosity. Together, we can transform surplus into support and make healthcare more accessible for everyone.
@@ -126,9 +123,9 @@
                             <!-- <div class="role">Team leader</div> -->
                             <div class="role">Frontend Developer</div>
                             <div class="social-media">
-                                <a href="https://twitter.com/lokesh" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/in/lokesh" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/lokesh" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/_lokiluxxe_?igsh=MXEyM2NmaWhhYzlrbw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/lokesh-patil-8a6708296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/Luffy031" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -142,9 +139,9 @@
                             <div class="name">Pratik Patil</div>
                             <div class="role">Backend Developer</div>
                             <div class="social-media">
-                                <a href="https://twitter.com/pratik" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/in/pratik" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/pratik" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/_pratik_rocks" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/pratik-codes" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/pratik-zzz" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -152,15 +149,15 @@
                 <div class="team-member">
                     <div class="card"data-aos="fade-down-100" data-aso-delay="100">
                         <div class="card-image">
-                            <img src="/static/images/aniket final.jpeg" alt="Lokesh Patil">
+                            <img src="/static/images/aniket final.jpeg" alt=" Aniket Vaidya">
                         </div>
                         <div class="card-content">
                             <div class="name">Aniket Vaidya</div>
                             <div class="role">Backend Developer</div>
                             <div class="social-media">
-                                <a href="https://twitter.com/lokesh" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/in/lokesh" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/lokesh" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/mr_aniket.vaidya" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/aniket-vaidya-75b270289" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/aniket-vaidya" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -168,15 +165,15 @@
                 <div class="team-member">
                     <div class="card"data-aos="fade-down-100" data-aso-delay="100">
                         <div class="card-image">
-                            <img src="/static/images/diksha2-removebg-preview2.png" alt="Diksha Rane">
+                            <img src="/static/images/diksha.jpg" alt="Diksha Rane">
                         </div>
                         <div class="card-content">
                             <div class="name">Diksha Rane</div>
                             <div class="role">Frontend Developer</div>
                             <div class="social-media">
-                                <a href="https://twitter.com/diksha" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://linkedin.com/in/diksha" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/diksha" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/diya_rane12" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/diksha-rane-97a241289" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/DikshaRane" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +181,7 @@
             </div>
         </section>
 
-      <!-- Help Button start -->
+        <!-- Help Button start -->
     
     <div class="help-button">
         <div class="icon phone " onclick="showHelp('phone')"><i class="fas fa-phone-alt"></i></div>
@@ -206,7 +203,7 @@
         <footer class="site-footer" id="contact">
            <div class="container">
                <div class="column">
-                 <h3>Registered  Office</h3>
+                 <h3>Registered Office</h3>
                  <p>XYZ, Jalgaon, Maharashtra, India, 425001</p>
                  <p>24x7 in service</p>
                  <p>Monday - Sunday</p>
@@ -228,6 +225,9 @@
                </a>
                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=givehubdonation@gmail.com" class="social-icon" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-envelope"></i>
+                <a href="https://walg.link/66b0a4b90f46b" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+
             </a>
                  </div>
                  
@@ -237,7 +237,6 @@
              </div>
          </footer>
       </section>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init();
@@ -245,7 +244,6 @@
     </script>
     <script src="{{ url_for('static', filename='../static/js/script.js') }}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
           var options = {
@@ -259,15 +257,15 @@
   
           var typed = new Typed("#typed", options);
         });
-      </script>
-      <script>
-    document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
+
+        document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
             document.getElementById('nav-menu').classList.toggle('half-open');
             this.classList.toggle('active');
         });
     
         // script.js
         function closeMobileNav() {
+            document.getElementById('nav-menu').classList.remove('half-open');
             document.getElementById('nav-menu').classList.remove('show');
         }
         
@@ -317,7 +315,7 @@
             }
         });
     });
-}); 
+});
       </script>
 </body>
 
